@@ -19,23 +19,23 @@ end
 
 
 
-    it 'keeps track of all brands' do
-      brands = ["Uggs", "Rainbow"]
-      brands.each do |brand|
-        Shoe.new(brand)
-      end
+    # it 'keeps track of all brands' do
+    #   brands = ["Uggs", "Rainbow"]
+    #   brands.each do |brand|
+    #     Shoe.new(brand)
+    #   end
 
-      brands.each do |brand|
-        expect(Shoe::BRANDS).to include(brand)
-      end
-    end
+    #   brands.each do |brand|
+    #     expect(Shoe::BRANDS).to include(brand)
+    #   end
+    # end
 
-    it 'only keeps track of unique brands' do
-      Shoe::BRANDS.clear
-      brands = ["Uggs", "Rainbow", "Nike", "Nike"]
-      brands.each do |brand|
-        Shoe.new(brand)
-      end
+    # it 'only keeps track of unique brands' do
+    #   Shoe::BRANDS.clear
+    #   brands = ["Uggs", "Rainbow", "Nike", "Nike"]
+    #   brands.each do |brand|
+    #     Shoe.new(brand)
+    #   end
 
-      expect(Shoe::BRANDS.size).to eq(3)
-    end
+    #   expect(Shoe::BRANDS.size).to eq(3)
+    # end
